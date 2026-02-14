@@ -1,20 +1,20 @@
-/* center page (optional) */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 80px;
+    margin-top: 300px;
+    background-color: black;
 }
 
-/* HEART SHAPE */
+/* Heart (scaled to 4x) */
 .heart {
   position: relative;
   width: 100px;
   height: 90px;
   margin: 40px auto;
   background: red;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) scale(4);
+  cursor: pointer; /* show pointer on hover */
 }
 
+/* Heart pseudo-elements */
 .heart::before,
 .heart::after {
   content: "";
@@ -33,4 +33,23 @@ body {
 .heart::after {
   left: 50px;
   top: 0;
+}
+
+/* Hidden content */
+.popup {
+  display: none; /* hidden by default */
+  text-align: center;
+  margin-top: 30px;
+}
+
+.popup p {
+  font-size: 20px;
+  color: #333;
+}
+
+.popup button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }

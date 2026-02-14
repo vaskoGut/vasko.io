@@ -6,7 +6,27 @@
 </head>
 
 <body>
-  <h1>Hello from GitHub Pages 🚀</h1>
-  <div class="heart"></div>
+   <!-- Heart -->
+  <div class="heart" id="heart"></div>
+
+  <!-- Hidden content -->
+  <div class="popup" id="popup">
+    <p>Котре краще місто Львів чи Вінниця? 💖</p>
+    <button onclick="alert('Єдано правильна відповідь')">Львів</button>
+    <button disabled onclick="alert('Button 2 clicked!')">Вінниця</button>
+
+    <p>Чи приїду я вгості в Жешув? 💖</p>
+    <button onclick="alert('дуже файно!')">Так, приїду :) </button>
+    <button onclick="alert('дуже файно!')">Угу, приїду :)</button>
+  </div>
+  <script>
+  const heart = document.getElementById('heart');
+  const popup = document.getElementById('popup');
+
+  heart.addEventListener('click', () => {
+    popup.style.display = 'block'; // show paragraph and buttons
+    heart.style.display = 'none';  // optional: hide heart after click
+  });
+</script>
 </body>
 </html>
